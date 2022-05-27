@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            text-align: center;
+            margin: auto;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        td {
+            background: white;
+            text-align: center;
+        }
+
+        .c1 {
+            background: white;
+            width: 150px;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* Blue */
+        .button2 {
+            background-color: #008CBA;
+        }
+    </style>
+</head>
+<body>
+<h3>입력한 정보를 확인해주세요</h3>
+<a href="">쇼핑몰로 이동</a>
+{#get 방식으로 입력정보를 넘겨보자.#}
+<table border="1">
+    <tr>
+        <td width="100" class="c1">항목</td>
+        <td width="200">입력</td>
+    </tr>
+    <tr>
+        <td width="100" class="c1">평일휴일</td>
+        <td width="200">
+            {{ one.week1 }}
+        </td>
+    </tr>
+    <tr>
+        <td width="100" class="c1">요일</td>
+        <td width="200">
+            {{ one.week2 }}
+        </td>
+    </tr>
+    <tr>
+        <td width="100" class="c1">시간대</td>
+        <td width="200">
+            {{ one.hour }}
+        </td>
+    </tr>
+    <tr>
+        <td width="100" class="c1">성별</td>
+        <td width="200">
+            {{ one.gender }}
+        </td>
+    </tr>
+    <tr>
+        <td width="100" class="c1">연령대</td>
+        <td width="200">
+            {{ one.age }}
+        </td>
+    </tr>
+    <tr>
+        <td width="100" class="c1">건수합계</td>
+        <td width="200">
+            {{ one.size }}
+        </td>
+    </tr>
+    <tr>
+        <td width="100" class="c1">네이버 태그 클릭량</td>
+        <td width="200">
+            {{ one.tag_click }}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <a href="/ML/output/{{ one.id }}">
+                <button class="button button2">카테고리 분류 시작</button>
+            </a>
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

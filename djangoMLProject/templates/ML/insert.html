@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML카테고리분류 예측값 넣는 html</title>
+    <style>
+        * {
+            text-align: center;
+            margin: auto;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        td {
+            background: white;
+            text-align: center;
+        }
+
+        .c1 {
+            background: white;
+            width: 150px;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* Blue */
+        .button2 {
+            background-color: #008CBA;
+        }
+    </style>
+</head>
+<body>
+<br>
+<h3>입력값을 넣어주세요</h3>
+</br>
+{#post방식으로 해줘야한다.get지원하지않음.#}
+<form action="/ML/insert2" method="post">
+    {# 토큰 으로 너무 많은 양과 잘못된 접근에 대해 차단해주는 기능을 한다.#}
+    {#승인된 유저에 한해 토큰을 주고 해당유저만 접근 가능#}
+    {% csrf_token %}
+    <table border="1">
+        <tr>
+            <td width="100" class="c1">항목</td>
+            <td width="200">입력</td>
+        </tr>
+        <tr>
+            <td width="100" class="c1">평일휴일</td>
+            <td width="200">
+                <input type="text" name="week1">
+            </td>
+        </tr>
+        <tr>
+            <td width="100" class="c1">요일</td>
+            <td width="200">
+                <input type="text" name="week2">
+            </td>
+        </tr>
+        <tr>
+            <td width="100" class="c1">시간대</td>
+            <td width="200">
+                <input type="text" name="hour">
+            </td>
+        </tr>
+        <tr>
+            <td width="100" class="c1">성별</td>
+            <td width="200">
+                <input type="text" name="gender">
+            </td>
+        </tr>
+        <tr>
+            <td width="100" class="c1">연령대</td>
+            <td width="200">
+                <input type="text" name="age">
+            </td>
+        </tr>
+        <tr>
+            <td width="100" class="c1">건수합계</td>
+            <td width="200">
+                <input type="text" name="size">
+            </td>
+        </tr>
+        <tr>
+            <td width="100" class="c1">네이버 태그 클릭량</td>
+            <td width="200">
+                <input type="text" name="tag_click">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button button2">값입력</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

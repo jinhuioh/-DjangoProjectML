@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            text-align: center;
+            margin: auto;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            view_data =
+            {{ data }}
+            var data = google.visualization.arrayToDataTable([
+                ['월평균 구매빈도 3회이상', '비율(%)'],
+                ['20대평균', view_data[0]],
+                ['30대평균', view_data[1]],
+                ['40대평균', view_data[2]],
+                ['50대평균', view_data[3]],
+                ['60대이상평균', view_data[4]]
+            ]);
+
+            var options = {
+                title: '2018~2020년 연령대별 월 평균 인터넷쇼핑 구매 빈도'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+<br>
+<div id="piechart" style="width: 900px; height: 500px;"></div>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+</html>

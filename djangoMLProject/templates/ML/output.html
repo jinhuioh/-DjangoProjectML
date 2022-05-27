@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            text-align: center;
+            margin: auto;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* Blue */
+        .button2 {
+            background-color: #008CBA;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>예측 결과</title>
+</head>
+<body>
+<br>
+<h3 align="center" style="margin: auto;">예측 카테고리는 {{ tag }}입니다.</h3>
+<br>
+<tr>
+    <td>
+        {#절대경로를 통해 views의 index로 갈 수 있도록 구현#}
+        <a href="/">
+            <button class="button button2">
+                처음으로 돌아가기
+            </button>
+        </a>
+    </td>
+</tr>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            text-align: center;
+            margin: auto;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        td {
+            background: white;
+            text-align: center;
+        }
+
+        .c1 {
+            background: white;
+            width: 150px;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* Blue */
+        .button2 {
+            background-color: #008CBA;
+        }
+    </style>
+</head>
+<body>
+<br>
+<h3>값을 입력하였습니다.</h3>
+<h3>검색하실 id는 {{ one.id }} 입니다.</h3>
+
+<table>
+    <tr>
+        <td>
+            <a href="/">
+                <button class="button button2">처음으로 돌아가기</button>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/ML/one">
+                <button class="button button2">아이디 검색하러가기</button>
+            </a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

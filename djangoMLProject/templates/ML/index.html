@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {# {% static....를 쓰면 static에서부터 (템플릿언어)주소시작. css를 찾는다.   #}
+    {#  css를 끼우려면 아래 2줄을 추가해주면 된다.  #}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.lightbox.css' %}">
+    {#  자바스크립트로 입히는방법  #}
+    {#    <script src="{% static 'js/bootstrap.js' %}"></script>#}
+    {#  cdn 입히는방법  #}
+    {#    <script src="cdn주소"></script>#}
+
+    <style>
+        * {
+            text-align: center;
+            margin: auto;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* Blue */
+        .button2 {
+            background-color: #008CBA;
+        }
+    </style>
+</head>
+{#<img src="/static/img/testimonials-left-dec.png">#}
+<body img src="/static/img/testimonials-left-dec.png">
+<br>
+<h3>카테고리 분류 시스템 사이트입니다</h3>
+<br>
+{#spring 프로젝트의 메인화면으로 이동하는 url#}
+<a href="http://localhost:8080/ShoppingMall/productList.jsp?user_id=">쇼핑몰로 이동</a>
+<table>
+    <tr>
+        <td width="200">
+            <a href="/ML/insert">
+                <button class="button button2">카테고리 예측값입력</button>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td width="200">
+            <a href="/ML/one">
+                <button class="button button2">아이디검색&분류값확인</button>
+            </a>
+        </td>
+        </td>
+    </tr>
+    <tr>
+        <td width="200">
+            <a href="/ML/chart">
+                <button class="button button2">pie차트 확인하러가기</button>
+            </a>
+        </td>
+        </td>
+    </tr>
+    <tr>
+        <td width="200">
+            <a href="/ML/chart2">
+                <button class="button button2">bar차트 확인하러가기</button>
+            </a>
+        </td>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
